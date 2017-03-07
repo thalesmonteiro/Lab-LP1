@@ -4,17 +4,18 @@
 using namespace std;
 
 int main(){
-	int vezes, aux, soma;
-	int ar[6] = {0,0,0,0,0,0};
+	float vezes, aux;
+	float ar[6] = {0};
+	float porcentagem;
 
 	cout << "Digite a quantidade de lançamentos: ";
 	cin >> vezes;			
 
 	srand(time(NULL));
-
-	for(int i = 0; i < vezes; i++){
+	
+	for(int i = 0; i <= vezes; i++){
 		
-		aux = (rand() % 6) + 1;
+		aux = (rand() % 6 + 1);
 
 		for(int j = 0; j < 6; j++){
 			if(aux == j){
@@ -22,13 +23,12 @@ int main(){
 			}
 		}
 	}
-	for(int i = 0; i < 6; i++){
-		cout << ar[i];
-	}
-	for(int i = 0; i < 6; i++){
-		soma = ((ar[i] / vezes) * 100);
-		cout << "Face " << (i + 1) << ": " << soma << endl;
 
+	for(int i = 0; i < 6; i++){
+		
+		porcentagem = ((ar[i] / vezes) * 100);
+
+		cout << "Face " << (i + 1) << ": " << porcentagem << "%"<< endl;
 	}
 
 

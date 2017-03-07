@@ -45,14 +45,14 @@ int main(){
 	}	
 
 	cout << endl;
+	cout << "Jogador\t Votos \t %" << endl;
 
 	for(int i = 0; i < 23; i++){
 		if(ar[i] != 0){
 			float porcentagem;
 
 			porcentagem = percentual(ar[i], votos);
-			cout << "Percentual de votos jogador " << (i + 1) <<" :" << porcentagem << "%" << endl;
-
+			cout << (i + 1) << "\t  "<< ar[i] << "\t" << porcentagem << endl;
 		}
 	}
 
