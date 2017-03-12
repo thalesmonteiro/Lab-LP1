@@ -3,7 +3,7 @@
 #include "empregado.h"
 
 using namespace std;
-//conjunto de arquivos (main2.cpp, empregado.h empregado.cpp)
+//conjunto de arquivos (main2.cpp empregado.h empregado.cpp)
 
 int main(){
 

@@ -1,5 +1,5 @@
 #include <string>
-#include "empregado.h"
+#include "empregado.h" //arquivo da classe
 
 using namespace std;
 

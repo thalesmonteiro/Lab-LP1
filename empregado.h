@@ -13,7 +13,7 @@ private:
 
 public:
 
-	Empregado(string, string, float); //metodo construtor
+	Empregado(string, string, float); //metodo  construtor
 
 	string getNome(){ return nome;};
 	string getSobrenome(){ return sobrenome;};
