@@ -35,12 +35,7 @@ void Data::avancarDia(){
 		}else{
 			setMes(m + 1);
 			setDia(1);
-			setAno(getAno() + 1);
 		}
-
-	}else{
-
-		setDia(getDia() + 1);
 	}
 }
 
