@@ -1,46 +1,26 @@
-#include <iostream>
-
+#include "despesa.h"
+#include <string>
 
 using namespace std;
 
-class Despesa{
-
-private:
-	double valor;
-	string tipoDeGasto;
-
-public:
-	Despesa(double, string); //metodo construtor
-	double getValor(){ return valor; };
-	string getTipoDeGasto(){ return tipoDeGasto; };
-
-	void setValor(double);
-
-	void setTipoDeGasto(string);
-};
-
-Despesa::Despesa(double v, string tg){
-	setValor(v);
-	setTipoDeGasto(tg);
+Despesa::Despesa(){
+	setValor(0.0);
+	settipoDeGasto("");
 }
 
-void setValor(double v){
-	valor = v;
+Despesa::Despesa(double val, string tipo){
+
+    setValor(val);
+    settipoDeGasto(tipo);
+
 }
 
-void setTipoDeGasto(string tg){
-	tipoDeGasto = tg;
+void Despesa::setValor(double val)
+{
+	valor = val;
 }
 
-class ControleDeGastos{
-
-private:
-	
-public:
-	double calculaTotalDeDespesa();
-	existeDespesaDoTipo(string);
-}
-
-double calculaTotalDeDespesa(){
-
+void Despesa::settipoDeGasto(string nom)
+{
+	tipoDeGasto = nom;
 }
