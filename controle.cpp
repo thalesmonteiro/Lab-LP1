@@ -19,7 +19,7 @@ void Controle::setDespesas(double val, string tip){
 	despesa->settipoDeGasto(tip);
 }
 
-float Controle::calculaTotalDeGastos(){
+/*float Controle::calculaTotalDeGastos(){
 	float somaDeGastos = 0;
 
 	for(int i = 0; i < TAM; i++){
@@ -27,4 +27,5 @@ float Controle::calculaTotalDeGastos(){
 	}
 
 	return somaDeGastos;
-}
+}*/
+

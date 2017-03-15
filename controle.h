@@ -8,13 +8,13 @@ using namespace std;
 class Controle{
 private:
 	Despesa *despesa;
+
 public:
 	Controle(double, string);
 	~Controle();
 	void setDespesas(double, string);
 	double getDespesasValor(){ return despesa->getValor(); }
 	string getDespesasTipoDeGasto(){ return despesa->gettipoDeGasto(); }
-
 	float calculaTotalDeGastos();
 	
 };

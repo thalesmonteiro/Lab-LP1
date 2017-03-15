@@ -19,6 +19,8 @@ public:
     void setValor(double val);
     string gettipoDeGasto() { return tipoDeGasto; }
     void settipoDeGasto(string tipo);
+    bool existeDespesaDoTipo(string);
+    double consultaTotalDeGastos(Despesa *);
 
 };
 
