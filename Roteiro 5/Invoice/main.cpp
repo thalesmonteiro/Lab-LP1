@@ -27,9 +27,7 @@ int main(){
 
 	cout << "Quantidade do produto vendido: ";
 	cin >> quantidade;
-
-	Invoice(numero, descricao, quantidade, preco); //metodo construtor
-
+	
 	Invoice InvoiceTest(numero, descricao, quantidade, preco); //objeto
 
 	valorFatura = InvoiceTest.getInvoiceAmount(quantidade, preco); 

@@ -35,13 +35,7 @@ void Data::avancarDia(){
 		}else{
 			setMes(m + 1);
 			setDia(1);
-			setAno(getAno() + 1);
 		}
-
-	}else{
-
-		setDia(getDia() + 1);
-	}
 }
 
 Data::Data(int d, int m, int a){ //metodo construtor 
