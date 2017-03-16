@@ -15,8 +15,7 @@ public:
 	void setDespesas(double, string);
 	double getDespesasValor(){ return despesa->getValor(); }
 	string getDespesasTipoDeGasto(){ return despesa->gettipoDeGasto(); }
-	float calculaTotalDeGastos();
-	
+
 };
 
 #endif
