@@ -2,20 +2,27 @@
 #define CONTROLE_H
 #include "despesa.h"
 #include <string>
+#define TAM 10
 
 using namespace std;
 
 class Controle{
+
 private:
-	Despesa *despesa;
+	
+	Despesa despesas[TAM];
+	int nDespesas;
 
 public:
-	Controle(double, string);
-	~Controle();
-	void setDespesas(double, string);
-	double getDespesasValor(){ return despesa->getValor(); }
-	string getDespesasTipoDeGasto(){ return despesa->gettipoDeGasto(); }
 
+	Controle();
+	Controle(double, string);
+
+	void setDespesas(Despesa);
+	double getDespesasValor(int nDespesas){ return despesas[nDespesas].getValor(); }
+	string getDespesasTipoDeGasto(int nDespesas){ return despesas[nDespesas].gettipoDeGasto(); }
+	double calculaTotalDeGasto(); 
+	bool existeDespesaDoTipo(string);
 };
 
 #endif

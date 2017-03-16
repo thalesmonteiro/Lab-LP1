@@ -3,82 +3,79 @@
 #include "controle.h"
 #include <string>
 #define TAM 10
-using namespace std;
 
 void ApresentaMenu();
 
 int main(){
-    int opcao , i = 0, flag = 0;
+    int opcao;
     double valor;
-    string tip, nomeDespesa;
-    Despesa gasto(valor, tip); //objeto
+    string tip;
 
-    Despesa valores[TAM];
+    Despesa gasto; //objeto
+
+    Controle cValores;
 
     cout << "\tControle de gastos" << endl;
 
-    
-    do{
+    while(true){
+
         ApresentaMenu();
         cin >> opcao;
 
         switch(opcao){
+
             case 1:
-                cout << "Digite o valor da despesa: ";
+
+                cout << "\nDigite o valor da despesa: ";
                 cin >> valor;
                 cin.ignore();
                 cout << "Digite o tipo de despesa: ";
                 getline(cin, tip);
 
-                valores[i].setValor(valor);
-                valores[i].settipoDeGasto(tip);
-                i++;  
+                gasto.setValor(valor);
+                gasto.settipoDeGasto(tip);
+
+                cValores.setDespesas(gasto);
 
                 break;
 
             case 2:
-               cout << "Total de gastos cadastrado: " << valores[TAM].consultaTotalDeGastos(valores) << endl;
-               break;
-            case 3:
-                cout <<"\nDespesa a ser buscada: ";
-                cin.ignore();
-                getline(cin, nomeDespesa);
-
-                for(int i = 0; i < TAM; i++){
-                    if(valores[i].existeDespesaDoTipo(nomeDespesa) == true){
-                        flag++;
-                    }      
-                }
-                if(flag != 0){
-                    cout << "Existe " << flag << " despesa(s) deste tipo." << endl;
-                }else{
-                    cout << "Não existe despesa desse tipo";
-                }  
-
+                cout << "Total de gastos cadastrado: " << cValores.calculaTotalDeGasto() << endl;
                 break;
+                
+            case 3:
+
+                cout << "Tipo de despesa: " ;
+                cin.ignore();
+                getline(cin, tip);
+
+                if(cValores.existeDespesaDoTipo(tip) == true){
+                    cout << "Existe despesa do tipo " << tip << endl;
+                }else{
+                    cout << "Não existe despesa desse tipo." << endl;
+                }
+                
+                break;
+                
             case 4:
-                return 0;
+                break;
 
             default:
                 cout << "Opção invalida" << endl;
                 cout << "\n\n";
                 break;
-            }//switch
-
-            cout << endl;
-    
-
-    }while(i < TAM); //o laço sera encerrado quando o i do array for menor do que o TAM (tamanho fixado via define)
+        }
+     
+    }
 
 
-
-  return 0;
-
-
+    return 0;
 }
 
+
 void ApresentaMenu(){
-    cout << "1- Adicionar nova despesa" << endl;
+
+    cout << "\n1- Adicionar nova despesa" << endl;
     cout << "2- Listar total de gasto" << endl;
     cout << "3- Pesquisar gasto por tipo de despesa" << endl;
     cout << "4- Sair" << endl;
