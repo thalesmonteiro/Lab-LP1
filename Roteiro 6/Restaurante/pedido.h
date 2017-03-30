@@ -14,6 +14,7 @@ private:
 	double preco;
 
 public:
+	
 	void setNumero(int);
 	int getNumero(){ return numero; };
 	void setDescricao(string);
@@ -21,7 +22,7 @@ public:
 	void setQuantidade(int);
 	int getQuantidade(){ return quantidade; };
 	void setPreco(double);
-	int getPreco(){ return preco; };
+	double getPreco(){ return preco; };
 
 	Pedido(int, string, int , double);
 	Pedido();

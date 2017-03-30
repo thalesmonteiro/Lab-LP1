@@ -12,7 +12,6 @@ void ApresentaCardapio(){
 	cout << "3- Rubacao            R$ 12,00" << endl;
 	cout << "4- Hamburguer         R$ 6,00 " << endl;
 	cout << "5- Salada             R$ 5,00" << endl;
-	cout << " ";
 }
 
 void ApresentaMenu(){
@@ -26,72 +25,82 @@ int main(){
 	int opcaoCardapio;
 	int quant = 0;
 	int opcaoMenu;
+	int numeroDaMesa;
 
-	Pedido aPedido;
-	MesaDeRestaurante aMesa;
+	
 	RestauranteCaseiro aMesaRes;
 
-	ApresentaMenu();
-	cout << "Escolha uma opcao: ";
-	cin >> opcaoMenu;
-						
-	if(opcaoMenu == 1){
 
-		ApresentaCardapio();
-			cout << "Escolha um item do cardapio: ";
-			cin >> opcaoCardapio;
-			cout << "Quantidade desejada: ";
-			cin >> quant;
+	while(true){
+		cout << "Digite o numero da mesa: ";
+		cin >> numeroDaMesa;
 
-				switch (opcaoCardapio){
-						case 1:
-							aPedido.setNumero(1);
-							aPedido.setDescricao("Refrigerante");
-							aPedido.setQuantidade(quant);
-							aPedido.setPreco(3.00);
+		ApresentaMenu();
+		cout << "Escolha uma opcao: ";
+		cin >> opcaoMenu;
 
-							break;
-						case 2:
+		if(opcaoMenu == 1){
 
-							aPedido.setNumero(2);
-							aPedido.setDescricao("Arroz com Fritas");
-							aPedido.setQuantidade(quant);
-							aPedido.setPreco((10.00) * quant);
-							break;
-						case 3:
+			ApresentaCardapio();
+				cout << "Escolha um item do cardapio: ";
+				cin >> opcaoCardapio;
+				cout << "Quantidade desejada: ";
+				cin >> quant;
 
-							aPedido.setNumero(3);
-							aPedido.setDescricao("Rubacao");
-							aPedido.setQuantidade(quant);
-							aPedido.setPreco((12.00) * quant);
-							break;
-						case 4:
+					switch (opcaoCardapio){
+							case 1:
+								//int aux = aMesaRes.aMesa[numeroDaMesa].getNumPedidos() + 1;
+								aMesaRes.getMesas(numeroDaMesa).adicionaAoPedido((Pedido(1, "Refrigerante", quant, (3.0) * quant)));
 
-							aPedido.setNumero(4);
-							aPedido.setDescricao("Hamburguer");
-							aPedido.setQuantidade(quant);
-							aPedido.setPreco((6.00) * quant);
-							break;
-						case 5:
-
-							aPedido.setNumero(5);
-							aPedido.setDescricao("Salada");
-							aPedido.setQuantidade(quant);
-							aPedido.setPreco((5.00) * quant) ;
-							break;
-					}
-		}
-
-		if(opcaoMenu == 2){
-			aMesa.zeraPedidos();
-			cout << "Pedido cancelado" << endl;
-		}
-
-		if(opcaoMenu == 3){
-			cout << "Total: " << aMesa.calculaTotal() << endl;
-		}
+								break;
+							case 2:
 
 
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setNumero(2);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setDescricao("Arroz com Fritas");
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setQuantidade(quant);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setPreco((10.00) * quant);
+
+								break;
+							case 3:
+
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setNumero(3);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setDescricao("Rubacao");
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setQuantidade(quant);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setPreco((12.00) * quant);
+
+			
+								break;
+							case 4:
+
+
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setNumero(4);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setDescricao("Hamburguer");
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setQuantidade(quant);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setPreco((6.00) * quant);
+
+								break;
+							case 5:
+
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setNumero(5);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setDescricao("Salada");
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setQuantidade(quant);
+								aMesaRes.getMesas(numeroDaMesa).getPedido().setPreco((5.00) * quant);
+
+								break;
+						}
+			}
+
+			if(opcaoMenu == 2){
+				aMesaRes.getMesas(numeroDaMesa).zeraPedidos();
+				cout << "Pedido cancelado" << endl;
+			}
+
+			if(opcaoMenu == 3){
+				cout << "Total: " << aMesaRes.getMesas(numeroDaMesa).calculaTotal() << endl;
+			}
+
+	}
 	
 
 	return 0;
