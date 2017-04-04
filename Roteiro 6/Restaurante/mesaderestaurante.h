@@ -16,9 +16,8 @@ private:
 
 public:
 	MesaDeRestaurante();
-	~MesaDeRestaurante();
-	Pedido getPedido() { return pedidos[numPedidos]; }
-	int getNumPedidos(){ return numPedidos; }
+	Pedido getPedido(); //{ return pedidos[numPedidos]; }
+	int getNumPedidos();//{ return numPedidos; }
 	void adicionaAoPedido(Pedido); // adiciona uma quantidade a um item da mesa
 	void zeraPedidos(); //zera a quantidade de pedidos
 	double calculaTotal(); //calcula o total a ser pago pela mesa

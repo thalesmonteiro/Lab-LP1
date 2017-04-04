@@ -2,20 +2,20 @@
 
 using namespace std;
 
-void Pedido::setNumero(int num){
-	numero = num;
+void Pedido::setNumero(int numero){
+	this->numero = numero;
 }
 
-void Pedido::setDescricao(string desc){
-	descricao = desc;
+void Pedido::setDescricao(string descricao){
+	this->descricao = descricao;
 }
 
-void Pedido::setQuantidade(int quant){
-	quantidade = quant;
+void Pedido::setQuantidade(int quantidade){
+	this->quantidade = quantidade;
 }
 
-void Pedido::setPreco(double prec){
-	preco = prec;
+void Pedido::setPreco(double preco){
+	this->preco = preco;
 }
 
 Pedido::Pedido(int num, string desc, int quant, double prec){

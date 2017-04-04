@@ -11,12 +11,12 @@ class RestauranteCaseiro{
 
 	private:
 		MesaDeRestaurante mesas[TAM];
-		int numMesa;
+		int flagPedidos;
 
     public:
     	MesaDeRestaurante getMesas(int i){ return mesas[i];}
 		RestauranteCaseiro();
-    	void adicionarAoPedido(Pedido); ///adiciona uma quantidade
+    	void adicionarAoPedido(Pedido, int); ///adiciona uma quantidade
         double calculaTotalRestaurante(); //calcula o total arrecado de todas as mesas
 
 };

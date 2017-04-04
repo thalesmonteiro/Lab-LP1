@@ -5,17 +5,18 @@
 using namespace std;
 
 RestauranteCaseiro::RestauranteCaseiro(){
-    numMesa = 0;
+    flagPedidos = 0;
 }
 
-void RestauranteCaseiro::adicionarAoPedido(Pedido ped){  ///adiciona uma quantidade
-    mesas[numMesa].adicionaAoPedido(ped); //adicionaAoPedido da classe mesaderestaurante
+void RestauranteCaseiro::adicionarAoPedido(Pedido ped, int numero){  ///adiciona uma quantidade
+    mesas[numero].adicionaAoPedido(ped); //adicionaAoPedido da classe mesaderestaurante
+    flagPedidos++;
 } 
 
 double RestauranteCaseiro::calculaTotalRestaurante(){
     double total = 0.0;
 
-	for(int i = 0; i < numMesa; i++){
+	for(int i = 0; i < TAM; i++){
 		total += mesas[i].calculaTotal();
 	}
 

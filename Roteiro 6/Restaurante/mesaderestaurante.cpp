@@ -7,14 +7,12 @@ MesaDeRestaurante::MesaDeRestaurante(){
 	numPedidos = 0;
 	valorFinal = 0.0;
 }
-MesaDeRestaurante::~MesaDeRestaurante(){
-}
+
 
 void MesaDeRestaurante::adicionaAoPedido(Pedido ped){
 	pedidos[numPedidos] = ped;
 	valorFinal += ped.getPreco();
 	numPedidos++;
-
 }
 
 void MesaDeRestaurante::zeraPedidos(){
@@ -28,5 +26,8 @@ void MesaDeRestaurante::zeraPedidos(){
 }
 
 double MesaDeRestaurante::calculaTotal(){
+
 	return valorFinal;
 }
+Pedido MesaDeRestaurante::getPedido() { return pedidos[numPedidos]; }
+int MesaDeRestaurante::getNumPedidos(){ return numPedidos; }
