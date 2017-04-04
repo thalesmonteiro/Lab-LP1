@@ -5,12 +5,10 @@
 using namespace std;
 
 RestauranteCaseiro::RestauranteCaseiro(){
-    flagPedidos = 0;
 }
 
 void RestauranteCaseiro::adicionarAoPedido(Pedido ped, int numero){  ///adiciona uma quantidade
     mesas[numero].adicionaAoPedido(ped); //adicionaAoPedido da classe mesaderestaurante
-    flagPedidos++;
 } 
 
 double RestauranteCaseiro::calculaTotalRestaurante(){
