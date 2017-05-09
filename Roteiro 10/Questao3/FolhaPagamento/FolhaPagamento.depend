@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1492611054 source:/home/aluno/Documents/FolhaPagamento/src/Assalariados.cpp
+	"Assalariados.h"
+
+1492609411 /home/aluno/Documents/FolhaPagamento/include/Assalariados.h
+	"Funcionario.h"
+	<iostream>
+
+1492610976 /home/aluno/Documents/FolhaPagamento/include/Funcionario.h
+	<iostream>
+	<string>
+
+1492611116 source:/home/aluno/Documents/FolhaPagamento/src/Comissionados.cpp
+	"Comissionados.h"
+
+1492611091 /home/aluno/Documents/FolhaPagamento/include/Comissionados.h
+	"Funcionario.h"
+
+1492611411 source:/home/aluno/Documents/FolhaPagamento/src/Funcionario.cpp
+	"Funcionario.h"
+
+1493120528 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Assalariados.cpp
+	"Assalariados.h"
+
+1493120566 /home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Assalariados.h
+	"Funcionario.h"
+	<iostream>
+
+1493120374 /home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Funcionario.h
+	<iostream>
+	<string>
+
+1492623296 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Comissionados.cpp
+	"Comissionados.h"
+
+1492623284 /home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Comissionados.h
+	"Funcionario.h"
+
+1492623292 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Funcionario.cpp
+	"Funcionario.h"
+
+1493123623 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Horistas.cpp
+	"Horistas.h"
+
+1493120918 /home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/Horistas.h
+	"Funcionario.h"
+
+1493123645 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/main.cpp
+	<iostream>
+	"Funcionario.h"
+	"Assalariados.h"
+	"Horistas.h"
+	"Comissionados.h"
+	"SistemaGerenciaFolha.h"
+
+1493122847 source:/home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/SistemaGerenciaFolha.cpp
+	"SistemaGerenciaFolha.h"
+
+1493122836 /home/mateus/Documentos/UFPB/2º Periodo/Lab. LP1/Questao3/FolhaPagamento/SistemaGerenciaFolha.h
+	"Funcionario.h"
+	"Assalariados.h"
+	"Horistas.h"
+	"Comissionados.h"
+
